@@ -1,23 +1,12 @@
 version: 2.1
 
-parameters:
-  windows_image:
-    type: string
-    default: "windows-server-2019"
-
-executors:
-  win-executor:
-    machine:
-      image: << parameters.windows_image >>
-
 jobs:
   capture_screenshots:
     parameters:
       windows_image:
         type: string
-    executor:
-      name: win-executor
-      windows_image: << parameters.windows_image >>
+    machine:
+      image: << parameters.windows_image >>
     steps:
       - checkout
 
@@ -35,10 +24,9 @@ jobs:
           name: Run Selenium script
           command: python videzz_video.py
 
-      - persist_to_workspace:
-          root: .
-          paths:
-            - "**/*.png"
+      - store_artifacts:
+          path: .
+          destination: screenshots
 
 workflows:
   version: 2
