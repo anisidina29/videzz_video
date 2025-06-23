@@ -20,24 +20,24 @@ jobs:
   timeoutInMinutes: 20
   strategy:
     matrix:
-      windows1: { vmImage: 'windows-2019' }
-      windows2: { vmImage: 'windows-2019' }
-      windows3: { vmImage: 'windows-2019' }
-      windows4: { vmImage: 'windows-2019' }
-      windows5: { vmImage: 'windows-2019' }
-      windows6: { vmImage: 'windows-2019' }
-      windows7: { vmImage: 'windows-2019' }
-      windows8: { vmImage: 'windows-2019' }
-      windows9: { vmImage: 'windows-2019' }
-      windows10: { vmImage: 'windows-2019' }
-      latest1: { vmImage: 'windows-latest' }
-      latest2: { vmImage: 'windows-latest' }
-      latest3: { vmImage: 'windows-latest' }
-      latest4: { vmImage: 'windows-latest' }
-      latest5: { vmImage: 'windows-latest' }
-      latest6: { vmImage: 'windows-latest' }
-      latest7: { vmImage: 'windows-latest' }
-      latest8: { vmImage: 'windows-latest' }
+      # windows1: { vmImage: 'windows-2019' }
+      # windows2: { vmImage: 'windows-2019' }
+      # windows3: { vmImage: 'windows-2019' }
+      # windows4: { vmImage: 'windows-2019' }
+      # windows5: { vmImage: 'windows-2019' }
+      # windows6: { vmImage: 'windows-2019' }
+      # windows7: { vmImage: 'windows-2019' }
+      # windows8: { vmImage: 'windows-2019' }
+      # windows9: { vmImage: 'windows-2019' }
+      # windows10: { vmImage: 'windows-2019' }
+      # latest1: { vmImage: 'windows-latest' }
+      # latest2: { vmImage: 'windows-latest' }
+      # latest3: { vmImage: 'windows-latest' }
+      # latest4: { vmImage: 'windows-latest' }
+      # latest5: { vmImage: 'windows-latest' }
+      # latest6: { vmImage: 'windows-latest' }
+      # latest7: { vmImage: 'windows-latest' }
+      # latest8: { vmImage: 'windows-latest' }
       latest9: { vmImage: 'windows-latest' }
 
   pool:
