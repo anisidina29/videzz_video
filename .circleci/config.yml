@@ -37,9 +37,6 @@ workflows:
           filters:
             branches:
               only: main
-      - push:
-          branches:
-            only: main
     jobs:
       - capture_screenshots:
           matrix:
