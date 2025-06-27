@@ -1,5 +1,5 @@
 app = "videzz-video"
-primary_region = "iad"  # ← bạn có thể đổi sang sjc, ord, ewr...
+primary_region = "iad"  # Chọn region US phù hợp: iad, sjc, ord, ewr...
 
 [build]
   dockerfile = "Dockerfile"
@@ -9,14 +9,6 @@ primary_region = "iad"  # ← bạn có thể đổi sang sjc, ord, ewr...
 
 [experimental]
   auto_rollback = true
-
-[http_service]
-auto_start_machines = true
-auto_stop_machines = true
-force_https = true
-internal_port = 8080
-min_machines_running = 0
-processes = [ "app" ]
 
 [[vm]]
 cpu_kind = "shared"
