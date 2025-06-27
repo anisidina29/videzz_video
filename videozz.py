@@ -24,6 +24,7 @@ def create_chrome_options():
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
     return options
 
 
@@ -54,15 +55,17 @@ def random_mouse_move(driver):
 
 import requests
 
-# URL chứa file .txt
-url = "https://raw.githubusercontent.com/talblubClouby96/videzz_video/refs/heads/main/links.txt"
+# # URL chứa file .txt
+# url = "https://raw.githubusercontent.com/talblubClouby96/videzz_video/refs/heads/main/links.txt"
 
-# Tải nội dung từ URL
-response = requests.get(url)
-response.raise_for_status()  # Gây lỗi nếu tải thất bại
+# # Tải nội dung từ URL
+# response = requests.get(url)
+# response.raise_for_status()  # Gây lỗi nếu tải thất bại
 
-# Chuyển mỗi dòng thành một phần tử trong list
-link_list = response.text.strip().splitlines()
+# # Chuyển mỗi dòng thành một phần tử trong list
+# link_list = response.text.strip().splitlines()
+link_list =["https://vidoza.net/3xfsosiw1d07.html",
+            "https://vidoza.net/uyj8ouva35j6.html"]
 
 # Chọn ngẫu nhiên 2 link
 selected_links = random.sample(link_list, 2)
