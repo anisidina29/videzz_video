@@ -9,27 +9,22 @@ jobs:
       image: << parameters.windows_image >>
     steps:
       - checkout
-
       - run:
           name: Install Python
           command: choco install -y python --version=3.10.0
-
       - run:
           name: Install Python dependencies
           command: |
             python -m pip install --upgrade pip
             pip install undetected-chromedriver selenium chromedriver_autoinstaller pyautogui fake-useragent
-
       - run:
           name: Run Selenium script
           command: python videzz.py
-
       - store_artifacts:
           path: .
           destination: screenshots
 
 workflows:
-  version: 2
   run_screenshots:
     triggers:
       - schedule:
@@ -43,21 +38,4 @@ workflows:
             parameters:
               windows_image:
                 - windows-server-2019
-                - windows-server-2019
-                - windows-server-2019
-                - windows-server-2019
-                - windows-server-2019
-                - windows-server-2019
-                - windows-server-2019
-                - windows-server-2019
-                - windows-server-2019
-                - windows-server-2019
-                - windows-server-2022
-                - windows-server-2022
-                - windows-server-2022
-                - windows-server-2022
-                - windows-server-2022
-                - windows-server-2022
-                - windows-server-2022
-                - windows-server-2022
                 - windows-server-2022
